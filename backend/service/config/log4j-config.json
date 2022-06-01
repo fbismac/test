@@ -1,0 +1,28 @@
+{
+  "development": {
+    "api": {
+      "appenders": {
+        "service": {
+          "type": "file",
+          "filename": "service.log",
+          "layout": {
+            "type": "pattern",
+            "pattern": "[%d] [%p] %z %f{1}-%l - %m"
+          }
+        }
+      },
+      "categories": {
+        "default": {
+          "appenders": ["service"],
+          "level": "all",
+          "enableCallStack": true
+        },
+        "service": {
+          "appenders": ["service"],
+          "level": "all",
+          "enableCallStack": true
+        }
+      }
+    }
+  }
+}

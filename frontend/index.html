@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ismael Flores Exam</title>
+    <style>
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .mt-2 {
+        margin-top: 2em;
+      }
+
+      .ml-5 {
+        margin-left: 5em;
+      }
+
+      .py-2 {
+        padding: 0 2em 0 2em;
+      }
+
+      .header {
+        width: 14%;
+        max-width: 14%;
+        border-bottom: 1px solid;
+        margin-bottom: 1em;
+        background-color: rgb(21, 67, 67);
+        color: white;
+      }
+
+      .cell {
+        width: 14%;
+        max-width: 14%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="new-todos">
+        <h1>Registrar Nuevo Producto</h1>
+        <form>
+          <!-- First row -->
+          <div class="row">
+            <div class="col">
+              <label>Nombre:</label>
+              <input type="text" id="name" />
+            </div>
+            <div class="col ml-5">
+              <label>SKU:</label>
+              <input type="text" id="sku" />
+            </div>
+            <div class="col ml-5">
+              <label>Marca:</label>
+              <input type="text" id="brand" />
+            </div>
+            <div class="col ml-5">
+              <label>Costo:</label>
+              <input type="text" id="cost" />
+            </div>
+            <div class="col ml-5">
+              <label>Categoría</label>
+              <select id="categorySelector">
+                <option value="">Seleccione</option>
+                <option value="tv">Televisión</option>
+                <option value="laptop">Laptop</option>
+                <option value="shoe">Zapato</option>
+              </select>
+            </div>
+
+            <!-- Options -->
+            <div class="col ml-5">
+              <label id="labelOptionTag">Seleccione una opción:</label>
+              <select id="optionsDD"></select>
+            </div>
+            <div class="col ml-5">
+              <label id="labelValueTag">&nbsp;</label>
+              <input type="text" id="itemValue" />
+            </div>
+          </div>
+
+          <!-- Second row -->
+          <div class="row mt-2"></div>
+          <button type="submit">Registrar</button>
+        </form>
+      </div>
+      <h1>Productos</h1>
+      <ul></ul>
+      <div id="results" class="col">
+        <div class="row">
+          <div class="col py-2 header">Nombre</div>
+          <div class="col py-2 header">SKU</div>
+          <div class="col py-2 header">Marca</div>
+          <div class="col py-2 header">Costo</div>
+          <div class="col py-2 header">Categoría</div>
+          <div class="col py-2 header">Tipo</div>
+          <div class="col py-2 header">Valor</div>
+          <div class="col py-2 header">Eliminar</div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
